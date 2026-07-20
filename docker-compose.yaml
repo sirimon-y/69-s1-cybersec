@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: 69-s1-db
+    ports: 
+      - 54327:5432
+  environment:
+      - POSTGRES_PASSWORD=sirimon2005
+      - POSTGRES_USER=sirimon
+      - POSTGRES_DB=sirimon
+  volumes:
+    - ./data:/var/lib/postgresql/data,
+
+  admin:
+    image: dpage/pgadmin4
+    container_name: 69-s1-admin
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+  environment:
+    PGADMIN_DEFAULT_EMAIL: sirimon-y@rmutp.ac.th
+    PGADMIN_DEFAULT_PASSWORD: sirimon2005
