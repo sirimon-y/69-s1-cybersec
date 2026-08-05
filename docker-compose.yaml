@@ -21,3 +21,10 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: sirimon-y@rmutp.ac.th
       PGADMIN_DEFAULT_PASSWORD: sirimon2005
+
+    volumes:
+      - data-pgadmin:/var/lib/pgadmin
+
+volumes:
+  data-postgres:
+  data-pgadmin:
