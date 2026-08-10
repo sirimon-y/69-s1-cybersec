@@ -24,18 +24,7 @@ services:
     volumes:
       - data-pgadmin:/var/lib/pgadmin
 
-  app:
-    image: prawee/strapi
-    container_name: 69-s1-app
-    ports:
-      - "9091:1337"
-    environment:
-      DATABASE_CLIENT: postgres
-      DATABASE_HOST: 69-s1-db
-      DATABASE_PORT: 5432
-      DATABASE_NAME: sirimon
-      DATABASE_USERNAME: sirimon
-      DATABASE_PASSWORD: sirimon2005
-
-  volumes:
-    data-pgadmin:
+volumes:
+  data-postgres:
+  data-pgadmin:
+  
