@@ -21,7 +21,7 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
 
   app:
-    image: prawoee/strapi
+    image: prawee/strapi
     container_name: project-app
     ports:
       - "${APP_PORT}:1337"
